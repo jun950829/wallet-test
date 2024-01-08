@@ -16,6 +16,8 @@ const tokenABI = [
 // 토큰 컨트랙트와 상호작용하기 위한 객체 생성
 const tokenContract = new ethers.Contract(tokenAddress, tokenABI, wallet);
 
+console.log('tokenContract:', tokenContract);
+
 // 토큰 전송 함수
 async function sendToken(recipient, amount) {
   // 토큰의 소수점을 고려한 양 조정
